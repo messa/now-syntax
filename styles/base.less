@@ -47,7 +47,7 @@ atom-panel.modal .select-list ol.list-group li.selected {
 }
 
 atom-text-editor::shadow .highlight.find-result .region {
-  border-color: @magenta;
+  border-color: @dark-magenta;
 }
 
 atom-text-editor, :host {
@@ -113,7 +113,8 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .comment {
-  color: @dark-grey;
+  //color: @dark-grey;
+  color: @light-yellow;
 }
 
 .keyword {
@@ -287,7 +288,8 @@ atom-text-editor .search-results .marker.current-result .region,
       font-weight: bold;
     }
     &.comment {
-      color: @dark-grey;
+      //color: @dark-grey;
+      color: @light-yellow;
     }
 
     &.variable,
@@ -554,7 +556,11 @@ atom-text-editor[mini] .scroll-view,
   padding-left: 1px;
 }
 
-.meta > .storage.type + .entity.name {
+.meta > .storage.type + .entity.name, .entity.name.function {
   color: @white;
   font-weight: bolder;
+}
+
+.meta.function.parameters, .variable.parameter.function {
+    color: @white;
 }
